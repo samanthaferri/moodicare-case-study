@@ -1,0 +1,97 @@
+/* ============================================================
+   MoodiCare case study — LAYOUT
+   Page shell, section-band rhythm, tinted / dark bands,
+   decorative rings, horizontal-scroll wrapper. Structural only.
+   ============================================================ */
+
+.page {
+  overflow-x: clip; /* decorative rings bleed off the edges */
+}
+
+/* ---- Section band --------------------------------------- */
+/* One rhythm value between every section: each band carries its
+   bottom padding; the following band drops its top padding so the
+   gap is --section-space once, never doubled. Full-bleed colour
+   bands (tinted / deep) keep their own top padding so the band has
+   internal breathing room, and the band after one restarts the
+   rhythm. */
+.section {
+  position: relative;
+  padding-block: var(--section-space);
+}
+
+.section + .section { padding-top: 0; }
+
+.section.section--tinted,
+.section.section--deep,
+.section--tinted + .section,
+.section--deep + .section {
+  padding-top: var(--section-space);
+}
+
+/* Full-bleed tinted band (Role, Empathy in the reference) */
+.section--tinted { background: var(--color-surface-tinted); }
+
+/* Full-bleed dark band (Validation; also the footer) */
+.section--deep {
+  background: var(--gradient-inverse);
+  color: var(--color-text-on-inverse);
+}
+
+.section--deep .section-title { color: var(--white); }
+.section--deep .section-title::before { background: var(--overlay-12); }
+.section--deep .section-title__accent { color: var(--color-accent-on-inverse); }
+
+/* ---- Section header ------------------------------------- */
+.section__head {
+  margin-bottom: var(--space-6);
+}
+
+.section__head--center { text-align: center; }
+
+/* ---- Decorative art (real Figma SVG assets) ------------- */
+/* Concentric "Shape" rings and the hero "Union" motif, placed
+   bleeding off a band edge, behind content. Off-scale by design
+   (see the EXCEPTIONS block in tokens.css). */
+.deco {
+  position: absolute;
+  z-index: var(--z-deco);
+  pointer-events: none;
+  user-select: none;
+}
+
+.deco img { display: block; width: 100%; height: 100%; }
+
+.deco--rings {
+  width: var(--deco-rings-w);
+  height: var(--deco-rings-h);
+  opacity: var(--deco-rings-opacity);
+}
+
+.deco--union {
+  width: var(--deco-union-size);
+  height: var(--deco-union-size);
+  opacity: var(--deco-union-opacity);
+}
+
+.deco--tl { top: -160px; left: -180px; }
+.deco--tr { top: -60px; right: -110px; }
+.deco--bl { bottom: -140px; left: -200px; transform: rotate(-90deg); }
+.deco--br { bottom: -150px; right: -180px; transform: rotate(-90deg); }
+
+.section > .container {
+  position: relative;
+  z-index: var(--z-base);
+}
+
+/* Overview sits directly under the hero (a <header>, not a
+   .section, so the collapse rule above doesn't reach it) — drop
+   its top padding so the hero→overview seam uses one gap too. */
+#overview { padding-top: 0; }
+
+/* ---- Horizontal-scroll wrapper (wide tables, sitemap) --- */
+.scroll-x {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: var(--space-3);
+}

@@ -1,0 +1,258 @@
+/* ============================================================
+   MoodiCare case study — DESIGN TOKENS
+   ------------------------------------------------------------
+   TWO tiers:
+
+     1. PRIMITIVES  raw, context-free values (palette, scales).
+                    Never referenced by components.
+     2. SEMANTIC    intent-named aliases of primitives
+                    (text / surface / border / action / accent /
+                    feedback + typography roles). This is the
+                    layer components use.
+
+   Plus one small EXCEPTIONS block — three identity elements
+   whose geometry is deliberately outside the scales
+   (phone mockup, decorative rings, organic blob swatch).
+
+   Web-only behaviours (clamp() fluid type, gradients, layered
+   shadows) live here as implementation detail; tokens.json
+   exports only the Figma-representable values.
+
+   Values: Figma reference frame 11600:31363 (get_variable_defs)
+   + measured section screenshots. See design-system.md.
+   ============================================================ */
+
+/* ============================================================
+   1 — PRIMITIVES
+   ============================================================ */
+:root {
+  --white: #ffffff;
+
+  /* Teal / verde-água */
+  --teal-700: #32817f; /* Figma Corporate/dark_primary */
+  --teal-500: #47b2b0; /* Figma Corporate/primary — the brand */
+  --teal-200: #c1e1e1; /* Figma Corporate/light_primary */
+  --teal-100: #e0f0f0; /* Figma Grayscale/divider_light — highlighter swipe, soft fills */
+  --teal-050: #f4fbfa; /* softest wash */
+  --teal-frame: #f5fafa; /* neutral frame behind screenshots */
+  --teal-bright: #7fe0dd; /* accent that stays legible on navy */
+  --teal-grad-lite: #7fe0d4; /* brand-gradient light stop (gradient only) */
+
+  /* Navy / azul-marinho */
+  --navy-900: #0f1330;
+  --navy-800: #151938; /* headings + phone frame */
+  --navy-700: #1a1f46; /* Figma Corporate/secondary — strong text, dark-band base */
+  --navy-200: #c7ccea; /* body text on dark */
+  --navy-300: #9aa2c8; /* muted text on dark */
+
+  /* Neutrals */
+  --neutral-900: #202020; /* body copy */
+  --neutral-800: #37383f; /* secondary copy */
+  --neutral-400: #9b949e; /* captions / sources */
+  --neutral-350: #ada7af; /* strong hairline / dashed */
+  --neutral-200: #e0e0e0; /* inactive marks */
+  --neutral-150: #f2f1f3; /* dividers, metric-grid gaps */
+  --neutral-050: #f9fbfb; /* off-white page */
+
+  /* Feedback */
+  --coral-500: #ff6682; /* Figma Informing/error — journey barrier */
+
+  /* Notice / caution (honesty notes only) */
+  --amber-050: #fff9ec;
+  --amber-200: #f2e2b8;
+  --amber-700: #7a6320;
+  --amber-800: #6b5a2a;
+
+  /* Asset-only */
+  --slate-200: #dfe3f0; /* phone-mockup screen backing */
+
+  /* Light overlays on dark surfaces */
+  --overlay-05: rgba(255, 255, 255, 0.05);
+  --overlay-06: rgba(255, 255, 255, 0.06);
+  --overlay-12: rgba(255, 255, 255, 0.12);
+  --overlay-14: rgba(255, 255, 255, 0.14);
+  --overlay-35: rgba(255, 255, 255, 0.35);
+
+  /* Font */
+  --font-poppins: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif;
+
+  --weight-light: 300; /* cover description / type specimen only */
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+  --weight-black: 900; /* cover title only */
+
+  /* Type sizes — fluid (web). Figma: min/max in tokens.json. */
+  --size-display: clamp(2.75rem, 1.4rem + 5vw, 4.375rem); /* 44 → 70 */
+  --size-title: clamp(2rem, 1.3rem + 2.6vw, 2.5625rem); /* 32 → 41 — section titles */
+  --size-h2: clamp(1.4rem, 1.1rem + 1.4vw, 2rem); /* 22 → 32 — flow title, tagline */
+  --size-h3: 1.25rem; /* 20 — card titles, eyebrow */
+  --size-lead: clamp(1.25rem, 0.9rem + 1.4vw, 1.625rem); /* 20 → 26 — standfirst, stat value */
+  --size-body: 1.125rem; /* 18 */
+  --size-sm: 0.9375rem; /* 15 — card body, list items, cells */
+  --size-xs: 0.8125rem; /* 13 — caption */
+  --size-2xs: 0.71875rem; /* 11.5 — label / kicker */
+  --size-metric: clamp(2rem, 1.3rem + 2vw, 2.625rem); /* 32 → 42 — big numbers */
+
+  /* Line-height */
+  --leading-tight: 1.15; /* display, section title, metric */
+  --leading-snug: 1.35; /* card titles */
+  --leading-normal: 1.5; /* dense body, cells */
+  --leading-relaxed: 1.65; /* running copy */
+
+  /* Letter-spacing */
+  --tracking-tight: -0.03em; /* big numbers, cover title */
+  --tracking-normal: 0;
+  --tracking-wide: 0.06em; /* micro badges */
+  --tracking-wider: 0.12em; /* kickers */
+
+  /* Spacing — 4pt base */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+
+  /* Radius — 6 steps */
+  --radius-xs: 8px; /* small marks, inset cards */
+  --radius-sm: 12px; /* chips, table cells, icons */
+  --radius-md: 16px; /* tags, metric grid, flow badge, notice */
+  --radius-lg: 24px; /* cards, panels, media frames */
+  --radius-pill: 999px;
+  --radius-round: 50%;
+
+  /* Border widths */
+  --border-hairline: 1px;
+  --border-thin: 2px;
+  --border-thick: 3px;
+
+  /* Elevation — 3 steps */
+  --shadow-sm:
+    0 0 2px rgba(5 6 15 / 0.02),
+    0 0 2px rgba(5 6 15 / 0.04),
+    0 2px 6px rgba(5 6 15 / 0.08);
+  --shadow-card: 0 4px 20px rgba(26 31 70 / 0.08);
+  --shadow-raised:
+    0 2px 6px rgba(5 6 15 / 0.05),
+    0 20px 44px -20px rgba(26 31 70 / 0.24);
+
+  /* Z-index */
+  --z-below: -1; /* highlighter swipe behind text */
+  --z-deco: 0; /* decorative rings */
+  --z-base: 1;
+  --z-raised: 2;
+
+  /* Layout */
+  --container: 1240px; /* default content width */
+  --container-narrow: 1080px; /* text-led sections */
+  --gutter: clamp(1rem, 4vw, 2.5rem);
+  --section-space: clamp(2.75rem, 4.5vw, 4.5rem); /* one rhythm value between every section */
+
+  /* Breakpoints — reference only (var() is not valid inside @media).
+     Systemic set: 480 / 640 / 900. Local exceptions kept where
+     indispensable are marked in components.css. */
+  --bp-xs: 480px;
+  --bp-sm: 640px;
+  --bp-md: 900px;
+}
+
+/* ============================================================
+   2 — SEMANTIC
+   ============================================================ */
+:root {
+  /* ---- Text ---- */
+  --color-text-primary: var(--navy-800);
+  --color-text-secondary: var(--neutral-800);
+  --color-text-muted: var(--neutral-400);
+  --color-text-strong: var(--navy-700); /* big numbers, emphatic labels */
+  --color-text-accent: var(--teal-700); /* accent word, links, kickers */
+  --color-text-on-brand: var(--white); /* on a solid teal surface */
+  --color-text-on-inverse: var(--navy-200); /* body on the dark band */
+  --color-text-on-inverse-muted: var(--navy-300);
+
+  /* ---- Surface ---- */
+  --color-surface-page: var(--neutral-050);
+  --color-surface-card: var(--white);
+  --color-surface-soft: var(--teal-100); /* chips, sort-card body, highlighter */
+  --color-surface-soft-alt: var(--teal-050); /* soft card fill */
+  --color-surface-tinted: var(--teal-200); /* tinted bands, tags */
+  --color-surface-frame: var(--teal-frame); /* frame behind screenshots */
+  --color-surface-inverse: var(--navy-700); /* dark band base */
+  --color-surface-notice: var(--amber-050);
+  --color-surface-inset-inverse: var(--overlay-06); /* inset cards on dark */
+
+  /* ---- Border ---- */
+  --color-border-subtle: var(--teal-200); /* card hairline */
+  --color-border-divider: var(--neutral-150); /* row / section hairlines */
+  --color-border-strong: var(--neutral-350);
+  --color-border-muted: var(--neutral-200); /* inactive check ring */
+  --color-border-notice: var(--amber-200);
+  --color-border-on-inverse: var(--overlay-12);
+  --color-border-on-inverse-strong: var(--overlay-14);
+
+  /* ---- Action / accent / focus ---- */
+  --color-action-primary: var(--teal-500);
+  --color-action-primary-hover: var(--teal-700);
+  --color-link: var(--teal-700);
+  --color-link-hover: var(--navy-700);
+  --color-accent-brand: var(--teal-500); /* markers, dividers, number segments */
+  --color-accent-on-inverse: var(--teal-bright);
+  --color-focus-ring: var(--teal-500);
+
+  /* ---- Feedback ---- */
+  --color-feedback-error: var(--coral-500);
+  --color-notice-text: var(--amber-800);
+  --color-notice-heading: var(--amber-700);
+
+  /* ---- Identity accent ---- */
+  --color-title-highlight: var(--teal-100); /* the section-title swipe */
+
+  /* ---- Gradients (web impl detail — not Figma variables) ---- */
+  --gradient-inverse: linear-gradient(160deg, var(--navy-700), var(--navy-900));
+  --gradient-brand: linear-gradient(135deg, var(--teal-grad-lite), var(--teal-500));
+  --gradient-notice: linear-gradient(135deg, var(--teal-050), var(--teal-100));
+
+  /* ---- Typography roles (10) ---- */
+  --font-family-base: var(--font-poppins);
+  --text-display: var(--size-display); /* cover title */
+  --text-title: var(--size-title); /* section band titles */
+  --text-h2: var(--size-h2); /* flow title, footer h2, cover tagline */
+  --text-h3: var(--size-h3); /* card titles, eyebrow, sub-heads */
+  --text-lead: var(--size-lead); /* standfirst paragraphs, context stat value */
+  --text-body: var(--size-body);
+  --text-body-sm: var(--size-sm); /* card body, list items, table cells */
+  --text-caption: var(--size-xs); /* captions, sources, swatch hex */
+  --text-label: var(--size-2xs); /* kickers, micro-labels, journey sub-labels */
+  --text-metric: var(--size-metric); /* overview + validation big numbers */
+}
+
+/* ============================================================
+   EXCEPTIONS — three identity elements deliberately off-scale.
+   Documented and limited. Do not grow this block.
+   ============================================================ */
+:root {
+  /* (a) Phone mockup — bespoke device geometry (cover) */
+  --phone-frame-color: var(--navy-800);
+  --phone-frame-width: 6px;
+  --phone-radius: 44px;
+  --phone-screen-radius: 34px;
+  --phone-screen-bg: var(--slate-200);
+  --phone-tilt: -10.5deg;
+  --phone-shadow: 20px 20px 40px rgba(39 40 45 / 0.15);
+
+  /* (b) Decorative rings / union — organic bleed art */
+  --deco-rings-w: 325px;
+  --deco-rings-h: 487px;
+  --deco-rings-opacity: 0.32;
+  --deco-union-size: 535px;
+  --deco-union-opacity: 0.55;
+
+  /* (c) Organic blob swatch — the one non-tokenised radius.
+     Used verbatim in components.css (.swatch__chip):
+     border-radius: 44% 56% 58% 42% / 54% 46% 54% 46%; */
+}

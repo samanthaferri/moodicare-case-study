@@ -1,0 +1,1755 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MoodiCare — Product Design Case Study</title>
+  <meta
+    name="description"
+    content="Product Design case study for MoodiCare, a mobile app that integrates medication adherence and mood tracking for mental health care."
+  />
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="assets/css/tokens.css" />
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/layout.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+</head>
+
+<body>
+  
+  <div class="page">
+
+    
+    <header class="cover" id="cover" data-figma="11593:31218">
+      <span class="deco deco--union deco--tr" aria-hidden="true">
+        <img src="assets/img/deco-rings-union.svg" alt="" />
+      </span>
+      <span class="deco deco--rings deco--bl" aria-hidden="true">
+        <img src="assets/img/deco-rings-corner.svg" alt="" />
+      </span>
+
+      <span class="cover__logo">
+        <img src="assets/img/logo-heart.svg" alt="" />
+        MoodiCare
+      </span>
+
+      <div class="container">
+        <div class="cover__grid">
+          <div class="cover__intro">
+            <span class="cover__eyebrow">UI/UX Case Study</span>
+            <h1 class="cover__title">MoodiCare</h1>
+            <p class="cover__tagline">Mental health care in the palm of your hand.</p>
+            <p class="cover__desc">
+              Moodicare is a <strong>mobile app</strong> for
+              <strong>medication adherence</strong> and
+              <strong>mood tracking</strong>, focused on mental health care.
+            </p>
+            <div class="cover__tools">
+              <p class="cover__tools-label">Tools</p>
+              <a class="tool-chip" href="https://www.figma.com/" target="_blank" rel="noopener" aria-label="Figma">
+                <img src="assets/img/figma-mark.jpg" alt="" />
+              </a>
+            </div>
+          </div>
+
+          
+          <div class="cover__art" data-figma="11593:31229">
+            <figure class="phone phone--back">
+              <img class="phone__screen" src="assets/img/screen-add-medication.png"
+                   alt="MoodiCare — add medication screen" />
+            </figure>
+            <figure class="phone phone--front">
+              <img class="phone__screen" src="assets/img/screen-home.png"
+                   alt="MoodiCare — home / daily schedule screen" />
+            </figure>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+
+      
+      <section class="section" id="overview" data-figma="11594:31376">
+        <span class="deco deco--rings deco--tl" aria-hidden="true">
+          <img src="assets/img/deco-rings-corner.svg" alt="" />
+        </span>
+        <div class="container container--narrow">
+          
+          <p class="eyebrow">Project Overview</p>
+
+          
+          <div class="metrics">
+            <div class="metric">
+              <div class="stat-number">Solo</div>
+              <div class="metric__label">Role</div>
+              <div class="metric__caption">End-to-end UX/UI</div>
+            </div>
+            <div class="metric">
+              <div class="stat-number">6<em>mo</em></div>
+              <div class="metric__label">Timeline</div>
+              <div class="metric__caption">Undergraduate thesis (TCC)</div>
+            </div>
+            <div class="metric">
+              <div class="stat-number">10</div>
+              <div class="metric__label">Flows</div>
+              <div class="metric__caption">40+ hi-fi screens</div>
+            </div>
+            <div class="metric">
+              <div class="stat-number">3<em>+1</em></div>
+              <div class="metric__label">Recognition</div>
+              <div class="metric__caption">3 papers, 1 research award</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      
+      <section class="section" id="context" data-figma="11599:31217">
+        <span class="deco deco--rings deco--br" aria-hidden="true">
+          <img src="assets/img/deco-rings-corner.svg" alt="" />
+        </span>
+        <div class="container container--narrow">
+          <div class="section__head section__head--center">
+            <h2 class="section-title section-title--center">
+              The <span class="section-title__accent">Context</span>
+            </h2>
+          </div>
+
+          <p class="section-lead section-lead--justify">
+            The WHO estimated that in 2021
+            <strong>more than one billion people lived with a mental disorder</strong>,
+            roughly <strong>14% of the world's population</strong>. Continuous care is
+            hard to sustain, and two everyday problems keep undermining it. They are
+            interdependent, yet most tools treat them apart.
+          </p>
+
+          
+          <div class="stat-card">
+            <div class="stat-card__labels">
+              <span class="badge badge--pill pill-label">Prevalence</span>
+              <span class="badge badge--pill pill-label">Treatment gap</span>
+              <span class="badge badge--pill pill-label">Cost</span>
+            </div>
+            <div class="stat-card__grid">
+              <figure class="stat">
+                <span class="stat__icon"><img src="assets/img/context-stat-prevalence.png" alt="" /></span>
+                <span class="stat__kicker">Nearly</span>
+                <span class="stat__value"><em>1</em> in <em>7</em></span>
+                <span class="stat__text">people worldwide live with a mental disorder, over 1 billion in total</span>
+              </figure>
+              <figure class="stat">
+                <span class="stat__icon"><img src="assets/img/context-stat-treatment.png" alt="" /></span>
+                <span class="stat__value">9<em>%</em></span>
+                <span class="stat__text">of people with depression receive adequate treatment</span>
+              </figure>
+              <figure class="stat">
+                <span class="stat__icon"><img src="assets/img/context-stat-cost.png" alt="" /></span>
+                <span class="stat__value">US$<em>1tn</em></span>
+                <span class="stat__text">lost every year to depression and anxiety in productivity</span>
+              </figure>
+            </div>
+          </div>
+
+          <p class="section-note">Source: OMS — World Health Organization (WHO), 2025</p>
+        </div>
+      </section>
+
+      
+      <section
+        class="section"
+        id="problem"
+        data-figma="11622:34546"
+        data-provisional
+      >
+        <div class="container container--narrow">
+          <div class="section__head section__head--center">
+            <h2 class="section-title section-title--center">
+              The <span class="section-title__accent">Problem</span>
+            </h2>
+          </div>
+
+          <p class="section-lead">
+            Behind those numbers, two everyday problems keep undermining continuous
+            treatment. They are interdependent, yet most tools handle them apart.
+          </p>
+
+          <div class="problem-grid">
+            <article class="card card--soft card--pad-lg">
+              <span class="badge badge--label">Problem 01</span>
+              <h3 class="card__title">Medication slips through the cracks</h3>
+              <p>
+                People forget doses, lose track of complex schedules, and drift out of
+                treatment. Low adherence is one of the main obstacles to clinical
+                results in long treatments, and it raises the risk of relapse.
+              </p>
+            </article>
+            <article class="card card--soft card--pad-lg">
+              <span class="badge badge--label">Problem 02</span>
+              <h3 class="card__title">Emotional history goes unrecorded</h3>
+              <p>
+                Mood variation stays poorly systematized outside the clinic. People
+                arrive at appointments without records and unsure what to say, which
+                makes individualized decisions harder for both sides.
+              </p>
+            </article>
+          </div>
+
+          <div class="card card--pad-roomy research-q">
+            <p class="kicker">Research question</p>
+            <p>
+              How can a mobile app, grounded in usability and user-centred design,
+              integrate emotional monitoring and medication-adherence support in a way
+              that is accessible, consistent, and useful for clinical follow-up?
+            </p>
+          </div>
+        </div>
+      </section>
+
+      
+      <section class="section" id="solution" data-figma="11601:31409">
+        <span class="deco deco--rings deco--br" aria-hidden="true">
+          <img src="assets/img/deco-rings-corner.svg" alt="" />
+        </span>
+        <div class="container container--narrow">
+          <div class="section__head section__head--center">
+            <h2 class="section-title section-title--center">
+              The <span class="section-title__accent">Solution</span>
+            </h2>
+          </div>
+
+          <p class="section-lead">
+            Two things that shape a treatment, <strong>medication</strong> and
+            <strong>mood</strong>, usually live in separate apps. Moodicare puts
+            them on the same timeline: <strong>reminders</strong>,
+            <strong>dose tracking</strong>, a <strong>daily mood log</strong>,
+            <strong>integrated analytics</strong>, and an
+            <strong>exportable clinical report</strong>, in one accessible
+            experience. It is a complement to professional care,
+            <strong>never a diagnostic tool</strong>.
+          </p>
+
+          <div class="feature-grid">
+            <article class="card feature">
+              <div class="feature__icon" aria-hidden="true">💊</div>
+              <h3 class="card__title">Medication Adherence</h3>
+              <p class="card__text">
+                Reminders at the right times so no dose is missed, with a full
+                treatment schedule
+              </p>
+            </article>
+            <article class="card feature">
+              <div class="feature__icon" aria-hidden="true">🙂</div>
+              <h3 class="card__title">Mood Tracking</h3>
+              <p class="card__text">
+                Log your mood, feelings, and notes in a few taps, as many times
+                as needed
+              </p>
+            </article>
+            <article class="card feature">
+              <div class="feature__icon" aria-hidden="true">📈</div>
+              <h3 class="card__title">Clinical Report</h3>
+              <p class="card__text">
+                Everything you've logged in one complete report, ready for your
+                next appointment
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      
+      <section
+        class="section section--tinted"
+        id="role"
+        data-figma="11622:33772"
+        data-provisional
+      >
+        <div class="container container--narrow">
+          <div class="section__head section__head--center">
+            <h2 class="section-title section-title--center">
+              <span class="section-title__accent">My Role</span> in the Project
+            </h2>
+          </div>
+
+          <p class="section-lead" lang="pt-BR">
+            Como <strong>UI/UX Designer</strong>, participei de
+            <strong>todo o processo de desenvolvimento do Moodicare</strong>: da
+            pesquisa inicial ao protótipo final. Meu foco foi
+            <strong>transformar dores reais de usuários</strong> em uma
+            <strong>experiência digital simples e acolhedora</strong>, que
+            facilitasse tanto o cuidado diário com a <strong>medicação</strong>
+            quanto o acompanhamento do <strong>humor</strong>.
+          </p>
+
+          <div class="role-tags" lang="pt-BR">
+            <span class="badge badge--tag">Desk Research</span>
+            <span class="badge badge--tag">Análise Competitiva</span>
+            <span class="badge badge--tag">Pesquisa de Usuários</span>
+            <span class="badge badge--tag">Público-alvo e Personas</span>
+            <span class="badge badge--tag">Arquitetura da Informação</span>
+            <span class="badge badge--tag">Jornada do Usuário</span>
+            <span class="badge badge--tag">Identidade Visual</span>
+            <span class="badge badge--tag">Design System</span>
+            <span class="badge badge--tag">Wireframes e Protótipos</span>
+            <span class="badge badge--tag">Validação com Usuários</span>
+            <span class="badge badge--tag">Insights e Próximos Passos</span>
+          </div>
+        </div>
+      </section>
+
+      
+      <section
+        class="section"
+        id="methodology"
+        data-figma="11622:34512"
+        data-provisional
+      >
+        <div class="container container--narrow">
+          <div class="section__head section__head--center">
+            <h2 class="section-title section-title--center">
+              <span class="section-title__accent">Methodology</span>
+            </h2>
+          </div>
+
+          <p class="section-lead">
+            The project follows <strong>user-centred design</strong> (ISO 9241-210)
+            and sets concrete accessibility and privacy targets as requirements,
+            because it handles sensitive health data. Six principles guided every
+            screen.
+          </p>
+
+          <div class="process" aria-hidden="true">
+            <span class="badge badge--outline">Research</span>
+            <span class="process__arrow">→</span>
+            <span class="badge badge--outline">Define</span>
+            <span class="process__arrow">→</span>
+            <span class="badge badge--outline">Ideate</span>
+            <span class="process__arrow">→</span>
+            <span class="badge badge--outline">Design system</span>
+            <span class="process__arrow">→</span>
+            <span class="badge badge--outline">Hi-fi flows</span>
+            <span class="process__arrow">→</span>
+            <span class="badge badge--outline">Validate</span>
+          </div>
+
+          <div class="principles">
+            <div class="principle">
+              <span class="principle__icon" aria-hidden="true">E</span>
+              <div>
+                <h3>Empathy</h3>
+                <p>Design for cognitive and emotional vulnerability, not against it.</p>
+              </div>
+            </div>
+            <div class="principle">
+              <span class="principle__icon" aria-hidden="true">C</span>
+              <div>
+                <h3>Clarity</h3>
+                <p>Interactions that are predictable and hard to misread. WCAG 2.1 contrast was set as a target.</p>
+              </div>
+            </div>
+            <div class="principle">
+              <span class="principle__icon" aria-hidden="true">S</span>
+              <div>
+                <h3>Simplicity</h3>
+                <p>Remove needless complexity so the daily routine stays light and easy to keep up.</p>
+              </div>
+            </div>
+            <div class="principle">
+              <span class="principle__icon" aria-hidden="true">♥</span>
+              <div>
+                <h3>Emotional design</h3>
+                <p>Soft shapes and calm colour lower the resistance people feel toward a health app.</p>
+              </div>
+            </div>
+            <div class="principle">
+              <span class="principle__icon" aria-hidden="true">§</span>
+              <div>
+                <h3>Privacy by design</h3>
+                <p>Sensitive data handled under Brazil's LGPD, considered inside the flows from the start.</p>
+              </div>
+            </div>
+            <div class="principle">
+              <span class="principle__icon" aria-hidden="true">◇</span>
+              <div>
+                <h3>Consistency</h3>
+                <p>A documented design system keeps behaviour predictable across the app.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      
+      <section class="section" id="requirements" data-provisional>
+        <div class="container container--narrow">
+          <div class="section__head section__head--center">
+            <h2 class="section-title section-title--center">
+              <span class="section-title__accent">Requirements</span>
+            </h2>
+          </div>
+
+          <p class="section-lead">
+            Research and definition converged into a set of requirements: what the
+            product must do, and the qualities it was required to hold because it
+            handles health data.
+          </p>
+
+          <div class="req-grid">
+            <div class="card card--pad-lg">
+              <h3 class="req__head"><span class="badge badge--label badge--solid">Functional</span> What it does</h3>
+              <ul>
+                <li><strong>Account &amp; access:</strong> sign up and log in with Google or email, recover password.</li>
+                <li><strong>Medication registration:</strong> five posology modes covering real prescriptions.</li>
+                <li><strong>Reminders:</strong> doses, missed-dose alerts, stock and mood check-ins.</li>
+                <li><strong>Dose logging:</strong> on-time, late, extra, ignored, and reschedule.</li>
+                <li><strong>Mood logging:</strong> 1–10 scale, feelings, and free-text notes.</li>
+                <li><strong>Integrated calendar:</strong> medication and mood on one timeline.</li>
+                <li><strong>Analytics &amp; report:</strong> adherence and mood, exportable as a clinical PDF.</li>
+                <li><strong>Management:</strong> suspend, resume or delete medications, keeping history.</li>
+              </ul>
+            </div>
+            <div class="card card--pad-lg">
+              <h3 class="req__head"><span class="badge badge--label badge--strong">Non-functional</span> How it should behave</h3>
+              <ul>
+                <li><strong>Accessibility:</strong> WCAG 2.1 contrast and legibility set as targets.</li>
+                <li><strong>Privacy:</strong> LGPD-aligned handling of sensitive data.</li>
+                <li><strong>Usability:</strong> grounded in ISO 9241-210.</li>
+                <li><strong>Consistency:</strong> a reusable component library with defined states.</li>
+                <li><strong>Plain language:</strong> conversational UX writing over clinical jargon.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      
+      <section
+        class="section"
+        id="competitive-analysis"
+        data-figma="11622:33200"
+        data-provisional
+      >
+        <div class="container">
+          <div class="section__head section__head--center">
+            <h2 class="section-title section-title--center">
+              <span class="section-title__accent">Competitive</span> Analysis
+            </h2>
+          </div>
+          <div class="scroll-x">
+            <table class="data-table data-table--comparison">
+              <thead>
+                <tr>
+                  <th scope="col">App</th>
+                  <th scope="col">Medication<br />control</th>
+                  <th scope="col">Medication<br />reminders</th>
+                  <th scope="col">Emotional<br />monitoring</th>
+                  <th scope="col">Visual<br />reports</th>
+                  <th scope="col">Clinical data<br />export</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row"><span class="data-table__app"><span class="badge badge--mono">MT</span>MyTherapy</span></th>
+                  <td><span class="check check--yes"></span></td>
+                  <td><span class="check check--yes"></span></td>
+                  <td><span class="check check--yes"></span></td>
+                  <td><span class="check check--yes"></span></td>
+                  <td><span class="check check--yes"></span></td>
+                </tr>
+                <tr>
+                  <th scope="row"><span class="data-table__app"><span class="badge badge--mono">Me</span>Medisafe</span></th>
+                  <td><span class="check check--yes"></span></td>
+                  <td><span class="check check--yes"></span></td>
+                  <td><span class="check check--no"></span></td>
+                  <td><span class="check check--yes"></span></td>
+                  <td><span class="check check--yes"></span></td>
+                </tr>
+                <tr>
+                  <th scope="row"><span class="data-table__app"><span class="badge badge--mono">DC</span>Dr. Cuco</span></th>
+                  <td><span class="check check--yes"></span></td>
+                  <td><span class="check check--yes"></span></td>
+                  <td><span class="check check--no"></span></td>
+                  <td><span class="check check--no"></span></td>
+                  <td><span class="check check--no"></span></td>
+                </tr>
+                <tr>
+                  <th scope="row"><span class="data-table__app"><span class="badge badge--mono">PR</span>Pill Reminder</span></th>
+                  <td><span class="check check--yes"></span></td>
+                  <td><span class="check check--yes"></span></td>
+                  <td><span class="check check--no"></span></td>
+                  <td><span class="check check--yes"></span></td>
+                  <td><span class="check check--yes"></span></td>
+                </tr>
+                <tr>
+                  <th scope="row"><span class="data-table__app"><span class="badge badge--mono">Be</span>Bearable</span></th>
+                  <td><span class="check check--yes"></span></td>
+                  <td><span class="check check--yes"></span></td>
+                  <td><span class="check check--yes"></span></td>
+                  <td><span class="check check--yes"></span></td>
+                  <td><span class="check check--yes"></span></td>
+                </tr>
+                <tr>
+                  <th scope="row"><span class="data-table__app"><span class="badge badge--mono">Br</span>Breeze</span></th>
+                  <td><span class="check check--no"></span></td>
+                  <td><span class="check check--no"></span></td>
+                  <td><span class="check check--yes"></span></td>
+                  <td><span class="check check--yes"></span></td>
+                  <td><span class="check check--no"></span></td>
+                </tr>
+                <tr>
+                  <th scope="row"><span class="data-table__app"><span class="badge badge--mono">M+</span>Me+</span></th>
+                  <td><span class="check check--no"></span></td>
+                  <td><span class="check check--no"></span></td>
+                  <td><span class="check check--yes"></span></td>
+                  <td><span class="check check--yes"></span></td>
+                  <td><span class="check check--no"></span></td>
+                </tr>
+                <tr>
+                  <th scope="row"><span class="data-table__app"><span class="badge badge--mono">DB</span>DailyBean</span></th>
+                  <td><span class="check check--no"></span></td>
+                  <td><span class="check check--no"></span></td>
+                  <td><span class="check check--yes"></span></td>
+                  <td><span class="check check--yes"></span></td>
+                  <td><span class="check check--no"></span></td>
+                </tr>
+                <tr>
+                  <th scope="row"><span class="data-table__app"><span class="badge badge--mono">Da</span>Daylio</span></th>
+                  <td><span class="check check--no"></span></td>
+                  <td><span class="check check--no"></span></td>
+                  <td><span class="check check--yes"></span></td>
+                  <td><span class="check check--yes"></span></td>
+                  <td><span class="check check--yes"></span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="section-note">
+            Nine apps assessed across medication and mood. A filled mark means the app
+            covers that capability well. Most tools cover only one of the two fronts —
+            the gap MoodiCare is designed to close.
+          </p>
+        </div>
+      </section>
+
+      
+      <section
+        class="section"
+        id="target-audience"
+        data-figma="11622:33943"
+        data-provisional
+      >
+        <div class="container">
+          <div class="section__head">
+            <h2 class="section-title">
+              <span class="section-title__accent">Target</span> Audience
+            </h2>
+          </div>
+          <div class="audience">
+            <div class="card card--soft card--pad-roomy" lang="pt-BR">
+              <ul class="marker-list marker-list--none">
+                <li>🙋🏻 Adultos de <strong>19 a 45 anos</strong> em
+                  <strong>tratamento contínuo com medicamentos</strong>;</li>
+                <li>⏰ Pessoas com dificuldade em seguir corretamente a
+                  <strong>rotina de medicação</strong>;</li>
+                <li>😕 Indivíduos que <strong>não percebem</strong> facilmente as
+                  <strong>mudanças no seu estado emocional</strong>;</li>
+                <li>📊 Pessoas que <strong>precisam de relatórios</strong> simples
+                  <strong>para apoio nas consultas médicas</strong>;</li>
+                <li>📱 Indivíduos que buscam um <strong>app único</strong> para
+                  <strong>gerenciar medicação e humor</strong> de forma acessível
+                  e integrada</li>
+              </ul>
+            </div>
+            <figure class="audience__art">
+              <img src="assets/img/target-scene.png"
+                   alt="Illustration — a person checking their phone during an appointment while a health professional takes notes" />
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      
+      <section
+        class="section section--tinted"
+        id="empathy-map"
+        data-figma="11622:33430"
+        data-provisional
+      >
+        <div class="container">
+          <div class="section__head section__head--center">
+            <h2 class="section-title section-title--center">
+              <span class="section-title__accent">Empathy</span> Map
+            </h2>
+          </div>
+
+          <div class="card card--pad-roomy empathy">
+            <div class="empathy__grid">
+              <div>
+                <p class="empathy__head"><span aria-hidden="true">🗣️</span> Says</p>
+                <div class="empathy__notes">
+                  <p class="empathy__note">"Sometimes I forget to take my meds."</p>
+                  <p class="empathy__note">"During the appointment, I can't remember everything I felt between sessions."</p>
+                </div>
+              </div>
+              <div>
+                <p class="empathy__head"><span aria-hidden="true">💭</span> Thinks</p>
+                <div class="empathy__notes">
+                  <p class="empathy__note">"If I didn't forget my meds, my treatment would have much better results."</p>
+                  <p class="empathy__note">"I'd like to spot patterns in my mood, to know if I'm actually improving."</p>
+                </div>
+              </div>
+              <div>
+                <p class="empathy__head"><span aria-hidden="true">📌</span> Does</p>
+                <div class="empathy__notes">
+                  <p class="empathy__note">Frequently forgets to take medication.</p>
+                  <p class="empathy__note">Arrives at appointments without clear records of wellbeing and adherence.</p>
+                </div>
+              </div>
+              <div>
+                <p class="empathy__head"><span aria-hidden="true">💔</span> Feels</p>
+                <div class="empathy__notes">
+                  <p class="empathy__note">Guilt and anxiety over not keeping a regular routine.</p>
+                  <p class="empathy__note">Insecurity in appointments, from not recalling important details.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      
+      <section
+        class="section"
+        id="personas"
+        data-figma="11622:34325"
+        data-provisional
+      >
+        <div class="container">
+          <div class="section__head section__head--center">
+            <h2 class="section-title section-title--center">
+              <span class="section-title__accent">Personas</span>
+            </h2>
+          </div>
+
+          <p class="section-lead">
+            To design for this audience I characterised it, then built three personas
+            to keep flow, language, automation and visualisation decisions anchored to
+            real needs.
+          </p>
+
+          
+          <article class="persona">
+            <p class="persona__marker">Persona 1</p>
+            <div class="persona__grid">
+              <div class="persona__aside">
+                <div class="card persona__card">
+                  <div class="persona__avatar">
+                    <img src="assets/img/persona-camila.png" alt="Camila" />
+                  </div>
+                  <p class="persona__name">Camila, 19</p>
+                </div>
+                <blockquote class="quote">
+                  "Sometimes I forget to take my meds and don't even notice whether
+                  I'm actually getting better."
+                </blockquote>
+              </div>
+              <div class="card">
+                <p class="card__title">Bio</p>
+                <p>
+                  Administration student. Recently started antidepressants after a
+                  mild anxiety-disorder diagnosis. Uses her phone daily for social
+                  media, calendar and reminders, but never tried a mental-health app.
+                </p>
+                <p class="card__title">Personality</p>
+                <ul class="persona__chips">
+                  <li class="badge badge--chip">Communicative</li>
+                  <li class="badge badge--chip">Anxious</li>
+                  <li class="badge badge--chip">Diligent</li>
+                  <li class="badge badge--chip">Practical</li>
+                </ul>
+              </div>
+              <div class="persona__pnd">
+                <div class="card">
+                  <p class="card__title">🎯 Goals</p>
+                  <ul>
+                    <li>A simple, visual way to follow her emotional evolution.</li>
+                    <li>Reminders that keep the treatment regular.</li>
+                    <li>Quick mood logging, for confidence in appointments.</li>
+                  </ul>
+                </div>
+                <div class="card">
+                  <p class="card__title">😟 Frustrations</p>
+                  <ul>
+                    <li>Forgets doses on busy days.</li>
+                    <li>Can't tell whether she is improving emotionally.</li>
+                    <li>Loses motivation when progress is invisible.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          
+          <article class="persona">
+            <p class="persona__marker">Persona 2</p>
+            <div class="persona__grid">
+              <div class="persona__aside">
+                <div class="card persona__card">
+                  <div class="persona__avatar">
+                    <img src="assets/img/persona-renata.png" alt="Renata" />
+                  </div>
+                  <p class="persona__name">Renata, 45</p>
+                </div>
+                <blockquote class="quote">
+                  "I struggle to remember all my medication times. I can't keep my
+                  treatment regular."
+                </blockquote>
+              </div>
+              <div class="card">
+                <p class="card__title">Bio</p>
+                <p>
+                  Public-school teacher. On continuous antidepressants for two years,
+                  with psychiatrist and psychologist follow-up. Uses her phone in a
+                  basic way and has low familiarity with health apps.
+                </p>
+                <p class="card__title">Personality</p>
+                <ul class="persona__chips">
+                  <li class="badge badge--chip">Dedicated</li>
+                  <li class="badge badge--chip">Resilient</li>
+                  <li class="badge badge--chip">Calm</li>
+                  <li class="badge badge--chip">Cautious</li>
+                </ul>
+              </div>
+              <div class="persona__pnd">
+                <div class="card">
+                  <p class="card__title">🎯 Goals</p>
+                  <ul>
+                    <li>A simple app that reminds her of medication times.</li>
+                    <li>Easy-to-read reports to bring to appointments.</li>
+                    <li>Accessible emotional tracking, without complications.</li>
+                  </ul>
+                </div>
+                <div class="card">
+                  <p class="card__title">😟 Frustrations</p>
+                  <ul>
+                    <li>Gets confused by complex menus and technical terms.</li>
+                    <li>Feels most apps are made for younger people.</li>
+                    <li>Forgets medication on heavy days.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          
+          <article class="persona">
+            <p class="persona__marker">Persona 3</p>
+            <div class="persona__grid">
+              <div class="persona__aside">
+                <div class="card persona__card">
+                  <div class="persona__avatar">
+                    <img src="assets/img/persona-henrique.png" alt="Henrique" />
+                  </div>
+                  <p class="persona__name">Henrique, 30</p>
+                </div>
+                <blockquote class="quote">
+                  "I like using tech, but I still haven't found an app that prepares me
+                  for appointments with my medication and mood history."
+                </blockquote>
+              </div>
+              <div class="card">
+                <p class="card__title">Bio</p>
+                <p>
+                  Freelance web developer. Uses mood stabilisers for about a year
+                  after a bipolar-disorder diagnosis and insomnia episodes. Highly
+                  tech-savvy, relies on many apps for personal and professional
+                  organisation.
+                </p>
+                <p class="card__title">Personality</p>
+                <ul class="persona__chips">
+                  <li class="badge badge--chip">Analytical</li>
+                  <li class="badge badge--chip">Pragmatic</li>
+                  <li class="badge badge--chip">Perfectionist</li>
+                  <li class="badge badge--chip">Logical</li>
+                </ul>
+              </div>
+              <div class="persona__pnd">
+                <div class="card">
+                  <p class="card__title">🎯 Goals</p>
+                  <ul>
+                    <li>Automate mood and medication logging to cut mental load.</li>
+                    <li>Reach appointments with a clear, objective history.</li>
+                    <li>Fold mental health into the digital routine he already keeps.</li>
+                  </ul>
+                </div>
+                <div class="card">
+                  <p class="card__title">😟 Frustrations</p>
+                  <ul>
+                    <li>Forgets to note emotional states, arriving without data.</li>
+                    <li>Uses many apps, but none integrates mood and medication.</li>
+                    <li>Struggles to keep a regular medication routine.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <p class="card card--notice method-note">
+            <strong>An honest note on method.</strong> These personas were built from
+            literature and the exploratory questionnaire, not from formal interviews
+            with people in continuous treatment. They are treated as grounded
+            hypotheses that guide design, not as validated profiles.
+          </p>
+        </div>
+      </section>
+
+      
+      <section
+        class="section"
+        id="user-journey"
+        data-figma="11622:33807"
+        data-provisional
+      >
+        <div class="container">
+          <div class="section__head section__head--center">
+            <h2 class="section-title section-title--center">
+              <span class="section-title__accent">User Journey</span>
+            </h2>
+          </div>
+          <div class="scroll-x">
+            <table class="data-table data-table--journey">
+              <thead>
+                <tr>
+                  <th scope="col">Stage</th>
+                  <th scope="col">Actions</th>
+                  <th scope="col">Goal</th>
+                  <th scope="col">Barrier</th>
+                  <th scope="col">Emotion</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Discovery<span class="data-table__sub" lang="pt-BR">Descoberta</span></th>
+                  <td>Finds the app through referral or search</td>
+                  <td>Find a trustworthy solution</td>
+                  <td class="is-barrier">Concerns about privacy and reliability</td>
+                  <td>🙂 Curiosity · slight anxiety</td>
+                </tr>
+                <tr>
+                  <th scope="row">First access<span class="data-table__sub" lang="pt-BR">Acesso inicial</span></th>
+                  <td>Downloads and signs up / logs in</td>
+                  <td>Start quickly without friction</td>
+                  <td class="is-barrier">Long sign-up, too many fields</td>
+                  <td>😌 Relief if simple · frustration if complex</td>
+                </tr>
+                <tr>
+                  <th scope="row">Setup<span class="data-table__sub" lang="pt-BR">Configuração</span></th>
+                  <td>Registers medications and first mood logs</td>
+                  <td>Organize therapeutic routine</td>
+                  <td class="is-barrier">Fear of entering wrong information</td>
+                  <td>😰 Anxiety · relief on completion</td>
+                </tr>
+                <tr>
+                  <th scope="row">Daily use<span class="data-table__sub" lang="pt-BR">Uso cotidiano</span></th>
+                  <td>Confirms doses and logs mood</td>
+                  <td>Follow prescription and build emotional awareness</td>
+                  <td class="is-barrier">Forgetting to use the app</td>
+                  <td>😕 Motivation · frustration when forgetting</td>
+                </tr>
+                <tr>
+                  <th scope="row">Monitoring<span class="data-table__sub" lang="pt-BR">Monitoramento</span></th>
+                  <td>Reviews adherence and mood charts</td>
+                  <td>Visualize patterns and progress</td>
+                  <td class="is-barrier">Confusing charts are demotivating</td>
+                  <td>🙂 Satisfaction · confusion</td>
+                </tr>
+                <tr>
+                  <th scope="row">Sharing<span class="data-table__sub" lang="pt-BR">Compartilhamento</span></th>
+                  <td>Exports PDF to healthcare professional</td>
+                  <td>Communicate progress to the doctor</td>
+                  <td class="is-barrier">Unclear report</td>
+                  <td>🤝 Trust · pride</td>
+                </tr>
+                <tr>
+                  <th scope="row">Engagement<span class="data-table__sub" lang="pt-BR">Engajamento</span></th>
+                  <td>Receives messages and builds habit</td>
+                  <td>Integrate app into daily routine</td>
+                  <td class="is-barrier">Repetitive routine leads to drop-off</td>
+                  <td>✨ Motivation · connection</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      
+      <section class="section" id="sitemap" data-figma="11622:32615">
+        <div class="container">
+          <div class="section__head section__head--center">
+            <h2 class="section-title section-title--center">
+              <span class="section-title__accent">Sitemap</span>
+            </h2>
+          </div>
+          <div class="media media--wide">
+            <img src="assets/img/sitemap.png"
+                 alt="MoodiCare sitemap — six columns (Pre-login, Home, Calendar, Medications, Reports, Settings) with screen cards, sub-steps and dose-state badges (pending / taken / delayed / skipped); legend at the top of the diagram" />
+          </div>
+        </div>
+      </section>
+
+      
+      <section
+        class="section"
+        id="information-architecture"
+        data-figma="11622:33638"
+        data-provisional
+      >
+        <div class="container">
+          <div class="section__head section__head--center">
+            <h2 class="section-title section-title--center">
+              <span class="section-title__accent">Card Sorting</span>
+            </h2>
+          </div>
+          <div class="sort-grid">
+            <div class="sort-col">
+              <article class="card sort-card">
+                <div class="sort-card__head">💊 Medication</div>
+                <div class="sort-card__body">
+                  <ul>
+                    <li>Manage medications (add, edit, delete)</li>
+                    <li>Suspend / resume treatment</li>
+                    <li>Manage doses (log, extra dose, reschedule)</li>
+                    <li>Dose agenda (calendar)</li>
+                    <li>Automatic reminders</li>
+                    <li>Stock replenishment</li>
+                  </ul>
+                </div>
+              </article>
+            </div>
+            <div class="sort-col">
+              <article class="card sort-card">
+                <div class="sort-card__head">🙂 Mood</div>
+                <div class="sort-card__body">
+                  <ul>
+                    <li>Mood logging (scale, feelings, free notes)</li>
+                    <li>Record history</li>
+                    <li>Automatic reminders</li>
+                  </ul>
+                </div>
+              </article>
+              <article class="card sort-card">
+                <div class="sort-card__head">📊 Reports</div>
+                <div class="sort-card__body">
+                  <ul>
+                    <li>Visual analytics (mood &amp; adherence)</li>
+                    <li>Clinical report export (PDF)</li>
+                  </ul>
+                </div>
+              </article>
+            </div>
+            <div class="sort-col">
+              <article class="card sort-card">
+                <div class="sort-card__head">👤 Account</div>
+                <div class="sort-card__body">
+                  <ul>
+                    <li>Sign up / log in</li>
+                    <li>Personal information</li>
+                    <li>Notification settings</li>
+                    <li>Privacy &amp; security</li>
+                  </ul>
+                </div>
+              </article>
+              <article class="card sort-card">
+                <div class="sort-card__head">🛠️ Support</div>
+                <div class="sort-card__body">
+                  <ul>
+                    <li>About the app</li>
+                    <li>Terms of use &amp; privacy policy</li>
+                    <li>Contact / support</li>
+                  </ul>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      
+      <section class="section" id="wireframes" data-figma="11622:33683">
+        <div class="container">
+          <div class="section__head section__head--center">
+            <h2 class="section-title section-title--center">
+              <span class="section-title__accent">Wireframes</span>
+            </h2>
+          </div>
+          <div class="media media--center">
+            <img src="assets/img/wireframes.png" loading="lazy"
+                 alt="Low-fidelity wireframe mosaic — sign-in, account creation, home schedule, add-medication steps, mood logging and reports screens" />
+          </div>
+        </div>
+      </section>
+
+      
+      <section class="section" id="visual-identity" data-figma="11622:33709">
+        <div class="container">
+          <div class="section__head section__head--center">
+            <h2 class="section-title section-title--center">
+              <span class="section-title__accent">Visual Identity</span>
+            </h2>
+          </div>
+
+          <p class="eyebrow eyebrow--dot">Typeface</p>
+          <div class="type-specimen">
+            <div>
+              <div class="type-specimen__big">Poppins</div>
+              <p class="type-specimen__alpha">
+                ABCDEFGHIJKLMNOPQRSTUVWXYZ<br />
+                abcdefghijklmnopqrstuvwxyz<br />
+                1234567890
+              </p>
+            </div>
+            <div>
+              <p class="type-note" lang="pt-BR" data-provisional>
+                A Poppins é uma fonte moderna, simples e fácil de ler. Seu estilo
+                geométrico traz clareza e organização, enquanto a variedade de
+                pesos tipográficos permite criar contraste e hierarquia visual.
+              </p>
+              <div class="type-weights">
+                <b>Poppins Bold</b> <span class="fw-medium">Poppins Medium</span><br />
+                <span class="fw-light">Poppins Light</span>
+                <span class="fw-regular">Poppins Regular</span>
+              </div>
+            </div>
+          </div>
+
+          <p class="eyebrow eyebrow--dot">Colors</p>
+          <div class="swatches">
+            <figure>
+              <span class="swatch__chip" style="background:#47B2B0"></span>
+              <figcaption>
+                <span class="swatch__name">Primary</span><br />
+                <span class="swatch__hex">#47B2B0</span>
+              </figcaption>
+            </figure>
+            <figure>
+              <span class="swatch__chip" style="background:#1A1F46"></span>
+              <figcaption>
+                <span class="swatch__name">Secondary</span><br />
+                <span class="swatch__hex">#1A1F46</span>
+              </figcaption>
+            </figure>
+            <figure>
+              <span class="swatch__chip" style="background:linear-gradient(135deg,#7FE0D4,#47B2B0)"></span>
+              <figcaption>
+                <span class="swatch__name">Gradient</span><br />
+                <span class="swatch__hex">#7FE0D4 → #47B2B0</span>
+              </figcaption>
+            </figure>
+            <figure>
+              <span class="swatch__chip" style="background:#9B949E"></span>
+              <figcaption>
+                <span class="swatch__name">Informative</span><br />
+                <span class="swatch__hex">#9B949E</span>
+              </figcaption>
+            </figure>
+            <figure>
+              <span class="swatch__chip" style="background:#F9FBFB"></span>
+              <figcaption>
+                <span class="swatch__name">Background</span><br />
+                <span class="swatch__hex">#F9FBFB</span>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      
+      <section class="section section--deep" id="validation" data-provisional>
+        <div class="container container--narrow">
+          <div class="section__head section__head--center">
+            <h2 class="section-title section-title--center">
+              Validating the <span class="section-title__accent">Proposal</span>
+            </h2>
+          </div>
+
+          <p class="section-lead">
+            Before building the experience, the <strong>concept</strong> was tested. A
+            structured questionnaire with <strong>65 respondents</strong> — Information
+            Systems students and health professionals — gauged routines, familiarity
+            with health apps, and interest in the proposed features. This was
+            <strong>exploratory</strong>: it measured declared interest and perceived
+            usefulness, not usability, task completion, or clinical impact. The app was
+            not published to the stores or used by anyone outside the team.
+          </p>
+
+          <div class="vstats">
+            <div class="card card--dark-inset vstat">
+              <div class="stat-number">89.2%</div>
+              <p>expressed moderate-to-high interest in a medication reminder app.</p>
+            </div>
+            <div class="card card--dark-inset vstat">
+              <div class="stat-number">84.6%</div>
+              <p>were open to using an app to record their emotions.</p>
+            </div>
+            <div class="card card--dark-inset vstat">
+              <div class="stat-number">73.8%</div>
+              <p>had never used a wellbeing or medication app before.</p>
+            </div>
+            <div class="card card--dark-inset vstat">
+              <div class="stat-number">52.3%</div>
+              <p>had already used medication for mental health, 29.2% on an ongoing basis.</p>
+            </div>
+            <div class="card card--dark-inset vstat">
+              <div class="stat-number">83.1%</div>
+              <p>had a close family member diagnosed with a mental disorder.</p>
+            </div>
+            <div class="card card--dark-inset vstat">
+              <div class="stat-number">30.8%</div>
+              <p>were in psychological or psychiatric follow-up at the time of the survey.</p>
+            </div>
+          </div>
+
+          <p class="section-note">
+            n = 65. "Moderate-to-high" groups ratings 3–5 on the survey's interest
+            scales. Percentages recalculated from the raw CSV; where an earlier version
+            of the thesis differs (reminder interest at 80%), the CSV figure is used.
+          </p>
+
+          <p class="section-lead">
+            Respondents also suggested, unprompted: AI-based personalised
+            recommendations, integration with clinical monitoring, and gamification —
+            pointing at where a next version could go.
+          </p>
+        </div>
+      </section>
+
+      
+      <section class="section" id="flows" data-provisional>
+        <div class="container">
+          <div class="section__head section__head--center">
+            <h2 class="section-title section-title--center">
+              The <span class="section-title__accent">Flows</span>
+            </h2>
+          </div>
+
+          <p class="section-lead">
+            The heart of the project: <strong>ten end-to-end flows</strong>, from first
+            launch to daily use, grouped by the six areas of the sitemap. Each was
+            prototyped in high fidelity and documented with its states, feature rules
+            and links back to the requirements, to be handed to engineering with as
+            little ambiguity as possible.
+          </p>
+          <p class="section-note">
+            The interface is shown in Brazilian Portuguese, the product's native
+            language. English captions explain what each step does.
+          </p>
+
+          <ul class="flow-index">
+            <li><a href="#flow-1"><span>01</span> Onboarding &amp; account creation</a></li>
+            <li><a href="#flow-2"><span>02</span> Login &amp; password recovery</a></li>
+            <li><a href="#flow-3"><span>03</span> Home &amp; daily navigation</a></li>
+            <li><a href="#flow-4"><span>04</span> Mood logging</a></li>
+            <li><a href="#flow-5"><span>05</span> Medication registration</a></li>
+            <li><a href="#flow-6"><span>06</span> Extra doses</a></li>
+            <li><a href="#flow-7"><span>07</span> Integrated calendar</a></li>
+            <li><a href="#flow-8"><span>08</span> Indicators &amp; clinical report</a></li>
+            <li><a href="#flow-9"><span>09</span> Medication management</a></li>
+            <li><a href="#flow-10"><span>10</span> Settings, notifications &amp; privacy</a></li>
+          </ul>
+
+          
+          <article class="flow" id="flow-1">
+            <div class="flow__head">
+              <span class="flow__badge">01</span>
+              <div>
+                <h3 class="flow__title">Onboarding &amp; account creation</h3>
+                <p class="flow__goal">Goal: explain the value first, ask for personal data second.</p>
+              </div>
+            </div>
+            <div class="flow__body">
+              <p>
+                Three welcome screens introduce the two axes and their integration
+                before a single field is requested, so the first impression is value,
+                not a demand. Only then does the app move into account creation: sign
+                up with Google or email, verify the email through a segmented code
+                input, and complete a short profile laid out for calm, sequential
+                reading.
+              </p>
+              <ul class="marker-list marker-list--square marker-list--cols">
+                <li>Value-first onboarding lowers the sense of immediate demand and builds trust.</li>
+                <li>Segmented code fields reduce typos and reinforce a sense of security.</li>
+                <li>A preferred form of address feeds personalization from the first screen.</li>
+                <li>Automatic redirect from onboarding to sign-up keeps the experience unbroken.</li>
+              </ul>
+            </div>
+            <figure class="media media--framed">
+              <div class="media__scroll">
+                <img src="assets/img/flows/flow-28.png" loading="lazy"
+                     alt="Three onboarding screens introducing medication support, mood tracking, and analytics" />
+              </div>
+            </figure>
+            <p class="media__cap">Onboarding: the three structuring ideas, shown before any sign-up.</p>
+            <figure class="media media--framed">
+              <div class="media__scroll">
+                <img src="assets/img/flows/flow-29.png" loading="lazy"
+                     alt="Account creation: sign up, email code verification, profile form empty and filled, confirmation" />
+              </div>
+            </figure>
+            <p class="media__cap">Account creation: sign up, verify by code, complete a minimal profile, land on a confirmation.</p>
+          </article>
+
+          
+          <article class="flow" id="flow-2">
+            <div class="flow__head">
+              <span class="flow__badge">02</span>
+              <div>
+                <h3 class="flow__title">Login &amp; password recovery</h3>
+                <p class="flow__goal">Goal: fast, repeatable re-entry, with self-service recovery that never dead-ends.</p>
+              </div>
+            </div>
+            <div class="flow__body">
+              <p>
+                Login is deliberately direct, because it repeats over time and shapes
+                how reliable the app feels. Recovery is a calm four-step sequence:
+                enter the email, confirm a code (with resend if it expires), set a new
+                password with real-time feedback on each requirement, then a clear
+                success screen back to login.
+              </p>
+              <ul class="marker-list marker-list--square marker-list--cols">
+                <li>"Remember me" keeps sessions active on trusted devices without extra friction.</li>
+                <li>A resend option on the code screen prevents users from getting stuck.</li>
+                <li>Live password validation shows each requirement being met as you type.</li>
+                <li>Every step ends in an explicit confirmation, so state is never ambiguous.</li>
+              </ul>
+            </div>
+            <figure class="media media--framed">
+              <div class="media__scroll">
+                <img src="assets/img/flows/flow-30.png" loading="lazy"
+                     alt="Login screen, empty and filled states, with Google and email methods" />
+              </div>
+            </figure>
+            <p class="media__cap">Login, empty and filled, with a path into recovery.</p>
+            <figure class="media media--framed">
+              <div class="media__scroll">
+                <img src="assets/img/flows/flow-31.png" loading="lazy"
+                     alt="Password recovery across five steps: email, code, new password with live feedback, success" />
+              </div>
+            </figure>
+            <p class="media__cap">Password recovery: email, code confirmation, new password with live feedback, and success.</p>
+          </article>
+
+          
+          <article class="flow" id="flow-3">
+            <div class="flow__head">
+              <span class="flow__badge">03</span>
+              <div>
+                <h3 class="flow__title">Home &amp; daily navigation</h3>
+                <p class="flow__goal">Goal: understand today's treatment at a glance, and act in one tap.</p>
+              </div>
+            </div>
+            <div class="flow__body">
+              <p>
+                The home screen greets users by their chosen name, opens with a
+                one-tap mood check-in, and presents the day's medication agenda in
+                chronological order. Every dose card carries a clear visual state, and
+                a floating button opens the most frequent actions.
+              </p>
+              <ul class="marker-list marker-list--square marker-list--cols">
+                <li>Tapping a mood face jumps straight into logging with the scale pre-positioned.</li>
+                <li>Dose cards encode five states (pending, on-time, ignored, off-schedule, unregistered).</li>
+                <li>Distinct empty states guide first-time users and quiet days without feeling broken.</li>
+                <li>A floating action button centralizes "add medication", "extra dose", and "log mood".</li>
+              </ul>
+            </div>
+            <figure class="media media--framed">
+              <div class="media__scroll">
+                <img src="assets/img/flows/flow-32.png" loading="lazy"
+                     alt="Home screen states from empty to a full daily agenda with dose cards, plus the quick-action sheet" />
+              </div>
+            </figure>
+            <p class="media__cap">Home: from empty state, to a full agenda, plus the quick-action sheet.</p>
+          </article>
+
+          
+          <article class="flow" id="flow-4">
+            <div class="flow__head">
+              <span class="flow__badge">04</span>
+              <div>
+                <h3 class="flow__title">Mood logging</h3>
+                <p class="flow__goal">Goal: capture emotion with warmth and enough depth to be useful, without feeling like a form.</p>
+              </div>
+            </div>
+            <div class="flow__body">
+              <p>
+                Logging happens in three progressive steps: a 1-to-10 intensity slider
+                mapped to five soft categories (with adjustable date and time for
+                retroactive entries), an optional multi-select of feeling chips, and an
+                optional free-text note. A number, categories and words together keep
+                the record analyzable but free to express.
+              </p>
+              <ul class="marker-list marker-list--square marker-list--cols">
+                <li>Quantitative, categorical, and textual data in one record widen interpretation.</li>
+                <li>Feelings can be added, renamed, reordered, hidden or removed; renames propagate to past records.</li>
+                <li>Deleting a feeling explains the impact and lets the user keep or erase associated history.</li>
+                <li>Multiple entries per day capture real oscillation instead of flattening it.</li>
+              </ul>
+            </div>
+            <figure class="media media--framed">
+              <div class="media__scroll">
+                <img src="assets/img/flows/flow-33.png" loading="lazy"
+                     alt="Mood logging: intensity slider, date/time picker, feeling chips, and free-text note" />
+              </div>
+            </figure>
+            <p class="media__cap">Mood logging in three steps: intensity, optional feelings, optional note.</p>
+            <figure class="media media--framed">
+              <div class="media__scroll">
+                <img src="assets/img/flows/flow-34.png" loading="lazy"
+                     alt="Managing feelings: add, edit, reorder, hide and remove, with a keep-or-erase-history dialog" />
+              </div>
+            </figure>
+            <p class="media__cap">Managing feelings, with clear handling of what happens to history on rename or delete.</p>
+          </article>
+
+          
+          <article class="flow" id="flow-5">
+            <div class="flow__head">
+              <span class="flow__badge">05</span>
+              <div>
+                <h3 class="flow__title">Medication registration</h3>
+                <p class="flow__goal">Goal: model a real prescription, so reminders, adherence and reports all follow from it.</p>
+              </div>
+            </div>
+            <div class="flow__body">
+              <p>
+                This was the hardest design problem in the project. Real prescriptions
+                vary enormously: a daily pill, an antibiotic every eight hours, an
+                injection every few days, medication only on specific weekdays, cycles
+                of use and pause, or something taken only when needed. Each pattern
+                implies different reminders, adherence math, and calendar behaviour.
+              </p>
+            </div>
+
+            <div class="card card--dark deepdive">
+              <p class="kicker">Deep dive · the posology system</p>
+              <p class="deepdive__title">One consistent shell, only the recurrence changes.</p>
+              <p>
+                I kept a single sequential structure for every medication —
+                identification, then mode of use, then times and doses, then treatment
+                duration, then optional stock control. Only the recurrence step differs
+                between patterns. That preserved a familiar rhythm across all cases
+                while still honouring the real logic of each prescription, which lowers
+                configuration complexity and prevents inconsistent data downstream.
+              </p>
+              <div class="modes">
+                <div class="card card--dark-inset card--radius-sm card--pad-sm mode"><b>Daily use</b><span>Every day, one or more times, freely adjustable.</span></div>
+                <div class="card card--dark-inset card--radius-sm card--pad-sm mode"><b>Regular intervals</b><span>Every X days or hours, auto-calculated from an anchor.</span></div>
+                <div class="card card--dark-inset card--radius-sm card--pad-sm mode"><b>Specific weekdays</b><span>Chosen days only; changes affect future schedules.</span></div>
+                <div class="card card--dark-inset card--radius-sm card--pad-sm mode"><b>Cycles</b><span>X days of use, Y of pause, auto-restart, no pause alerts.</span></div>
+                <div class="card card--dark-inset card--radius-sm card--pad-sm mode"><b>When needed</b><span>No reminders; logged only via manual extra doses.</span></div>
+              </div>
+              <p>
+                For hourly intervals, calculated times are locked while per-dose
+                quantity stays editable, protecting the prescribed logic from
+                accidental drift. Optional stock control estimates consumption and
+                warns before you run out.
+              </p>
+            </div>
+
+            <ul class="marker-list marker-list--square marker-list--cols">
+              <li>Starts with the pharmaceutical form, since it defines the route and everything downstream.</li>
+              <li>Only truly essential fields are required; concentration and notes stay optional.</li>
+              <li>Mode of use is asked in plain language: "How did your health professional ask you to take this?"</li>
+              <li>Schedule edits apply to future occurrences only, preserving the historical record.</li>
+            </ul>
+
+            <figure class="media media--framed">
+              <div class="media__scroll">
+                <img src="assets/img/flows/flow-35.png" loading="lazy"
+                     alt="Daily-use medication registration in four steps: form and name, mode of use, times and doses, duration and stock" />
+              </div>
+            </figure>
+            <p class="media__cap">The shared shell, shown here for daily use: form and name, mode of use, times and doses, duration and stock.</p>
+
+            <div class="media-pair">
+              <figure class="media media--framed">
+                <div class="media__scroll">
+                  <img src="assets/img/flows/flow-36.png" loading="lazy"
+                       alt="Registration for 'every X hours': interval config and an auto-generated schedule list" />
+                </div>
+              </figure>
+              <figure class="media media--framed">
+                <div class="media__scroll">
+                  <img src="assets/img/flows/flow-37.png" loading="lazy"
+                       alt="Registration for 'every X days': interval picker, then times and doses" />
+                </div>
+              </figure>
+            </div>
+            <div class="media-pair">
+              <figure class="media media--framed">
+                <div class="media__scroll">
+                  <img src="assets/img/flows/flow-38.png" loading="lazy"
+                       alt="Registration for specific weekdays: weekday toggle chips, times and doses, duration and stock" />
+                </div>
+              </figure>
+              <figure class="media media--framed">
+                <div class="media__scroll">
+                  <img src="assets/img/flows/flow-39.png" loading="lazy"
+                       alt="Registration for cycles of use and pause: cycle config with two pickers, then times and duration" />
+                </div>
+              </figure>
+            </div>
+            <p class="media__cap">Same rhythm, four different recurrences: every X hours, every X days, specific weekdays, and cycles.</p>
+          </article>
+
+          
+          <article class="flow" id="flow-6">
+            <div class="flow__head">
+              <span class="flow__badge">06</span>
+              <div>
+                <h3 class="flow__title">Extra doses</h3>
+                <p class="flow__goal">Goal: record what happens outside the plan without corrupting the plan.</p>
+              </div>
+            </div>
+            <div class="flow__body">
+              <p>
+                Sometimes a dose is taken off-schedule, or a professional advises an
+                occasional extra. The user picks an active medication, confirms
+                quantity, date and time (pre-filled with the current moment but fully
+                editable), and the dose enters history classified by its temporal
+                status. Crucially, it never rewrites the configured schedule.
+              </p>
+              <ul class="marker-list marker-list--square marker-list--cols">
+                <li>Only active medications appear, with a clear empty state and a shortcut to add one.</li>
+                <li>The selected medication stays pinned at the top to prevent mis-entry.</li>
+                <li>Pre-filled but editable date and time support immediate and retroactive logging.</li>
+                <li>Keeping extra doses separate protects the integrity of reports and indicators.</li>
+              </ul>
+            </div>
+            <figure class="media media--framed">
+              <div class="media__scroll">
+                <img src="assets/img/flows/flow-40.png" loading="lazy"
+                     alt="Extra dose logging: empty state, pick medication, dose form with a quantity stepper, home confirmation toast" />
+              </div>
+            </figure>
+            <p class="media__cap">Logging an extra dose: choose the medication, enter the details, confirm into history.</p>
+          </article>
+
+          
+          <article class="flow" id="flow-7">
+            <div class="flow__head">
+              <span class="flow__badge">07</span>
+              <div>
+                <h3 class="flow__title">Integrated calendar</h3>
+                <p class="flow__goal">Goal: one timeline for both medication and mood, so the picture stops being fragmented.</p>
+              </div>
+            </div>
+            <div class="flow__body">
+              <p>
+                This is where the two axes finally meet. A day-of-week strip and a
+                monthly view sit above a "Medication / Mood" tab switch that keeps the
+                selected date when you move between them. On the medication side,
+                tapping a dose opens a bottom sheet to Ignore, Take (now, on-time, or a
+                custom time), or Reschedule. On the mood side, every entry is editable
+                and deletable, with multiple records per day.
+              </p>
+              <ul class="marker-list marker-list--square marker-list--cols">
+                <li>Switching tabs preserves the date, keeping medication and mood in the same context.</li>
+                <li>"Take" distinguishes now, on-time, and a custom time, so delays are honest data.</li>
+                <li>"Ignore" records a deliberate omission, different from simply having no record.</li>
+                <li>Rescheduling is validated and generates a fresh reminder, so nothing falls through.</li>
+              </ul>
+            </div>
+            <figure class="media media--framed">
+              <div class="media__scroll">
+                <img src="assets/img/flows/flow-41.png" loading="lazy"
+                     alt="Medication calendar: dose states (skipped, delayed) and the take / ignore / reschedule bottom sheet" />
+              </div>
+            </figure>
+            <p class="media__cap">Medication calendar: dose states and the take / ignore / reschedule bottom sheet.</p>
+            <figure class="media media--framed" data-provisional>
+              <div class="media__scroll">
+                <img src="assets/img/flows/flow-42.png" loading="lazy"
+                     alt="Mood calendar: chronological entries on the same date, each editable and deletable" />
+              </div>
+            </figure>
+            <p class="media__cap">
+              Mood calendar: chronological entries on the same date, each editable and
+              deletable. <em>(Source screen still shows placeholder chip and note text —
+              flagged for cleanup.)</em>
+            </p>
+          </article>
+
+          
+          <article class="flow" id="flow-8">
+            <div class="flow__head">
+              <span class="flow__badge">08</span>
+              <div>
+                <h3 class="flow__title">Indicators &amp; clinical report</h3>
+                <p class="flow__goal">Goal: turn daily records into patterns a person and their doctor can actually read.</p>
+              </div>
+            </div>
+            <div class="flow__body">
+              <p>
+                The analytics layer offers weekly and monthly views: adherence as a
+                donut and per-medication rate, weekday bars, average mood with its
+                category, distribution by mood category, and the most frequent
+                feelings. As-needed medications show only what actually happened, so
+                they never distort adherence. From here, the user exports a clinical
+                report as a PDF for a chosen period, structured for professional
+                follow-up. It informs interpretation, it does not replace it.
+              </p>
+              <ul class="marker-list marker-list--square marker-list--cols">
+                <li>Two perspectives on adherence, overall and per-medication, avoid a single misleading number.</li>
+                <li>Doses confirmed more than 30 minutes late still count as taken, but are flagged distinctly.</li>
+                <li>A monthly mood grid relates weeks and weekdays, surfacing patterns at a glance.</li>
+                <li>The exportable report gives clinicians objective, period-based data to work from.</li>
+              </ul>
+            </div>
+            <figure class="media media--framed">
+              <div class="media__scroll">
+                <img src="assets/img/flows/flow-48.png" loading="lazy"
+                     alt="Weekly indicators: adherence donut and per-medication rate, weekday completion, mood average and feelings" />
+              </div>
+            </figure>
+            <p class="media__cap">Weekly indicators: adherence, weekday completion, mood average and feelings.</p>
+            <figure class="media media--framed">
+              <div class="media__scroll">
+                <img src="assets/img/flows/flow-49.png" loading="lazy"
+                     alt="Monthly indicators: full-month summary, per-medication calendar grids, mood distribution across weeks" />
+              </div>
+            </figure>
+            <p class="media__cap">Monthly indicators: a full-month summary, per-medication grids, and mood across weeks.</p>
+
+            <div class="report-cards">
+              <figure class="media media--document">
+                <img src="assets/img/flows/flow-50.png" loading="lazy"
+                     alt="Exported clinical report, pages 1–2: overview, prescriptions, per-medication adherence calendars (sample data)" />
+              </figure>
+              <figure class="media media--document">
+                <img src="assets/img/flows/flow-51.png" loading="lazy"
+                     alt="Exported clinical report, pages 3–4: mood analysis, distribution, mood line chart and entry table (sample data)" />
+              </figure>
+            </div>
+            <p class="media__cap">The exported clinical report (sample data): overview and adherence, then mood analysis.</p>
+          </article>
+
+          
+          <article class="flow" id="flow-9">
+            <div class="flow__head">
+              <span class="flow__badge">09</span>
+              <div>
+                <h3 class="flow__title">Medication management</h3>
+                <p class="flow__goal">Goal: consult, edit, pause and resume prescriptions without ever losing history.</p>
+              </div>
+            </div>
+            <div class="flow__body">
+              <p>
+                Medications are split into "in use" and "suspended". A detail screen
+                separates general information from the prescription itself. Users can
+                edit from a pre-filled form, suspend a medication so it drops out of
+                schedules, resume it later restoring its schedule, or delete it, always
+                with an explicit choice to keep or erase the associated history.
+              </p>
+              <ul class="marker-list marker-list--square marker-list--cols">
+                <li>Suspend and resume model real treatment interruptions without deleting anything.</li>
+                <li>Delete forces a conscious choice between keeping records or erasing them for good.</li>
+                <li>The detail screen mirrors how a prescription is actually reasoned about.</li>
+                <li>A persistent add shortcut lives even in the empty state.</li>
+              </ul>
+            </div>
+            <figure class="media media--framed">
+              <div class="media__scroll">
+                <img src="assets/img/flows/flow-43.png" loading="lazy"
+                     alt="Medication management: in-use and suspended lists, detail view, and the suspend / resume dialog" />
+              </div>
+            </figure>
+            <p class="media__cap">Managing medications: in-use and suspended lists, detail view, and suspend / resume.</p>
+          </article>
+
+          
+          <article class="flow" id="flow-10">
+            <div class="flow__head">
+              <span class="flow__badge">10</span>
+              <div>
+                <h3 class="flow__title">Settings, notifications &amp; privacy</h3>
+                <p class="flow__goal">Goal: give people real control over identity, reminders, and what shows on a lock screen.</p>
+              </div>
+            </div>
+            <div class="flow__body">
+              <p>
+                Settings group account and profile management alongside institutional
+                information and support. The most considered part is notifications.
+                Reminders cover doses, missed doses (with a configurable tolerance
+                window), a "take your meds when leaving home" nudge, stock
+                replenishment, and mood check-ins. Because these alerts can appear
+                where other people might see them, the user can hide medication names
+                in notifications, swapping them for neutral messages — privacy by
+                design tied to sensitive health data.
+              </p>
+              <ul class="marker-list marker-list--square marker-list--cols">
+                <li>A privacy toggle hides medication names on the lock screen, protecting data in shared spaces.</li>
+                <li>A configurable tolerance window defines when a dose counts as "possibly forgotten".</li>
+                <li>Reminders are granular, so people enable only what actually helps them.</li>
+                <li>Terms of use and privacy policy are surfaced in-app, not buried.</li>
+              </ul>
+            </div>
+            <figure class="media media--framed">
+              <div class="media__scroll">
+                <img src="assets/img/flows/flow-46.png" loading="lazy"
+                     alt="Notification and reminder settings, including a lock-screen mockup with stacked MoodiCare notifications" />
+              </div>
+            </figure>
+            <p class="media__cap">Notifications and reminders, including the option to hide medication names on the lock screen.</p>
+            <figure class="media media--framed">
+              <div class="media__scroll">
+                <img src="assets/img/flows/flow-44.png" loading="lazy"
+                     alt="Settings home and profile editing, with an avatar picker" />
+              </div>
+            </figure>
+            <p class="media__cap">Settings home and profile editing, with a light avatar picker.</p>
+            <figure class="media media--framed" data-provisional>
+              <div class="media__scroll">
+                <img src="assets/img/flows/flow-47.png" loading="lazy"
+                     alt="Support and legal: contact form, success message, terms of use and privacy policy" />
+              </div>
+            </figure>
+            <p class="media__cap">
+              Support &amp; legal: contact, terms of use, privacy policy.
+              <em>(Contact-form fields still show placeholder text — flagged for cleanup.)</em>
+            </p>
+          </article>
+        </div>
+      </section>
+
+      
+      <section class="section" id="outcomes" data-provisional>
+        <div class="container">
+          <div class="section__head section__head--center">
+            <h2 class="section-title section-title--center">
+              <span class="section-title__accent">Outcomes</span> &amp; Recognition
+            </h2>
+          </div>
+          <p class="section-lead">
+            The work produced a design system, ten documented end-to-end flows, a
+            high-fidelity prototype, and an exportable clinical-report artifact. It was
+            also presented and recognised at three academic venues.
+          </p>
+          <div class="outcomes">
+            <article class="card">
+              <p class="kicker">2024 · IFC Camboriú</p>
+              <h3 class="card__title">XV FICE</h3>
+              <p>Presented at the Fórum de Iniciação Científica e Extensão and recognised as "Trabalho Destaque" in the Research category.</p>
+            </article>
+            <article class="card">
+              <p class="kicker">2025 · Salamanca, Spain</p>
+              <h3 class="card__title">DiTTEt 2025</h3>
+              <p>Full paper accepted and presented in the proceedings.</p>
+            </article>
+            <article class="card">
+              <p class="kicker">2025 · Foz do Iguaçu</p>
+              <h3 class="card__title">Latinoware 2025</h3>
+              <p>Presented on the prototyping of the app for medication-adherence and emotional-monitoring support.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      
+      <section class="section" id="reflection" data-provisional>
+        <div class="container">
+          <div class="section__head section__head--center">
+            <h2 class="section-title section-title--center">
+              <span class="section-title__accent">Reflection</span> &amp; Next Steps
+            </h2>
+          </div>
+          <div class="reflect">
+            <article class="card card--pad-lg">
+              <h3 class="card__title">What worked</h3>
+              <p>
+                Anchoring every screen to user-centred principles kept the interface
+                calm under real complexity. Medication registration is the clearest
+                example: a genuinely intricate problem made routine by holding one
+                structure steady and letting only the recurrence change.
+              </p>
+            </article>
+            <article class="card card--pad-lg">
+              <h3 class="card__title">What I would do differently</h3>
+              <p>
+                Validate earlier and with real users. Personas grounded in desk
+                research are a reasonable start, but talking to people in continuous
+                treatment would sharpen priorities and surface edge cases I can only
+                hypothesise today.
+              </p>
+            </article>
+            <article class="card card--pad-lg">
+              <h3 class="card__title">What is next</h3>
+              <p>
+                Usability testing of the prototype, then development in React Native
+                and Laravel as planned in the thesis. Beyond that, the respondents' own
+                ideas: personalised recommendations, clinical integration, and light
+                gamification.
+              </p>
+            </article>
+            <article class="card card--pad-lg">
+              <h3 class="card__title">What I learned</h3>
+              <p>
+                Designing for health means designing for trust. Small decisions —
+                hiding a medication name on a lock screen, letting someone keep their
+                history when they delete a drug — are where an app earns the right to
+                hold sensitive data.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    
+    <footer class="section section--deep site-footer" id="footer" data-provisional>
+      <div class="container">
+        <p class="site-footer__lead">Thank you</p>
+        <h2>MoodiCare</h2>
+        <p>
+          Strategies to support medication adherence and emotional monitoring through a
+          mobile app — designed as a real complement to continuous care, not a
+          diagnostic tool.
+        </p>
+        <div class="site-footer__credits">
+          <div>
+            <p class="kicker">Author</p>
+            <p class="site-footer__v">Samantha Manuela Ferri Tavares</p>
+            
+          </div>
+          <div>
+            <p class="kicker">Context</p>
+            <p class="site-footer__v">Bachelor's in Information Systems</p>
+            <p>Instituto Federal Catarinense — Camboriú, 2026</p>
+          </div>
+          <div>
+            <p class="kicker">Interface</p>
+            <p class="site-footer__v">Brazilian Portuguese</p>
+            <p>High-fidelity prototype</p>
+          </div>
+        </div>
+        <p class="site-footer__fine">
+          UI/UX case study. Screens are high-fidelity prototypes; any report data shown
+          is fictitious. MoodiCare was implemented and run on a real device, but not
+          published to the stores or used by people outside the team.
+        </p>
+      </div>
+    </footer>
+
+  </div>
+</body>
+</html>
