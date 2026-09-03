@@ -175,28 +175,10 @@ tone. Sections are composed differently but built from the same small kit.
 | `project guidelines` | Project brief and working guidelines (Portuguese). |
 | `assets/img/README.md` | Export log mapping each asset to its Figma source node. |
 
-## Limitations
-
-- This repository is a **case-study page in progress**, not a finished
-  publication: some copy is placeholder or still in Portuguese, and 19 blocks
-  are marked `data-provisional`.
-- MoodiCare is **not clinically validated** and is not presented as such.
-- The app was **not published** to app stores and was **not used by anyone
-  outside the project team**.
-- The validation study (65 respondents) was **exploratory** — it captured
-  declared interest and perceived usefulness. It was not a usability test, a
-  task-completion study, or a clinical validation.
-- The design system has known items awaiting a visual-review decision (text
-  contrast on muted grey and on solid teal, radius rounding, the mobile cover at
-  very small widths, and overall page length) — see `design-system.md`
-  section 11.
-- The reference typeface (Poppins) is loaded from Google Fonts and needs network
-  access; a system-font stack is the fallback.
-
 ## Credits
 
-- **Author:** Samantha Manuela Ferri Tavares — end-to-end UX/UI; sole author of
-  the project.
+- **Author:** Samantha Manuela Ferri Tavares — end-to-end UX/UI.
+- **Advisor:** André Fabiano de Moraes.
 - **Academic context:** undergraduate project in Information Systems, Instituto
   Federal Catarinense — Campus Camboriú, 2026.
 - **Documented recognition** (from `project documentation`): presented at the XV FICE
