@@ -651,6 +651,12 @@
 }
 .cover__desc strong { font-weight: var(--weight-bold); }
 
+.cover__meta {
+  font-size: var(--text-caption);
+  line-height: var(--leading-normal);
+  color: var(--color-text-muted);
+}
+
 .cover__tools-label {
   margin-bottom: 0.5rem;
   font-weight: var(--weight-medium);
