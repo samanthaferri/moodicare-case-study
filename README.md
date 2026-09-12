@@ -21,7 +21,7 @@ through the project's origin, the problem, exploratory research, personas,
 product and UX decisions, flows, visual identity, validation, and reflections.
 The page is built from a Figma visual reference — each block carries a
 `data-figma` attribute linking it to its Figma node — and from the project's
-written source of truth, `project documentation`.
+documented research and design decisions.
 
 Two things are kept distinct throughout this README:
 
@@ -40,9 +40,9 @@ dependent on an asset flagged for cleanup. The design-system consolidation is
 complete and documented in `design-system.md`; a short list of open
 visual-review items is kept in its section 11.
 
-Regarding the product itself, as documented in `project documentation`: the app was
-implemented and executed on a real device, but has **not** been published to app
-stores and has **not** been used by anyone outside the project team.
+Regarding the product itself, the app was implemented and executed on a real
+device, but has **not** been published to app stores and has **not** been used
+by anyone outside the project team.
 
 ## Documented product capabilities (MoodiCare app)
 
@@ -88,7 +88,7 @@ Described in the project sources; **not implemented in this repository**:
 - No JavaScript, no framework, no build tool, no package manager, and no
   dependencies to install
 
-**MoodiCare app** (context only, not in this repository) — per `project documentation`:
+**MoodiCare app** (context only, not in this repository):
 React Native for the mobile app, Laravel for the backend/API, PostgreSQL for
 persistence, and Figma for the prototype.
 
@@ -109,8 +109,6 @@ persistence, and Figma for the prototype.
 │       └── *.png / *.svg / *.jpg   Screens, mockups, personas, illustrations, decor
 ├── tokens.json             Design tokens in DTCG JSON (mirrors tokens.css)
 ├── design-system.md        Design-system reference
-├── project documentation            Operational source of truth (PT) — context, evidence, decisions
-├── project guidelines               Project brief and working guidelines (PT)
 └── README.md               This file
 ```
 
@@ -169,10 +167,8 @@ tone. Sections are composed differently but built from the same small kit.
 
 | File | Contents |
 |--|--|
-| `project documentation` | Operational source of truth (Portuguese) — project context, evidence, decisions, flows, requirements, and the recalculated survey figures. |
 | `design-system.md` | Design-system reference (English) — tokens, components, rhythm, responsive rules, accessibility notes, and open items. |
 | `tokens.json` | Design tokens in DTCG format. |
-| `project guidelines` | Project brief and working guidelines (Portuguese). |
 | `assets/img/README.md` | Export log mapping each asset to its Figma source node. |
 
 ## Credits
@@ -181,7 +177,7 @@ tone. Sections are composed differently but built from the same small kit.
 - **Advisor:** André Fabiano de Moraes.
 - **Academic context:** undergraduate project in Information Systems, Instituto
   Federal Catarinense — Campus Camboriú, 2026.
-- **Documented recognition** (from `project documentation`): presented at the XV FICE
+- **Documented recognition:** presented at the XV FICE
   (2024), recognised as *Trabalho Destaque* in the Research category; full paper
   accepted and presented at DiTTEt 2025 (Salamanca); presented at Latinoware
   2025 (Foz do Iguaçu).
