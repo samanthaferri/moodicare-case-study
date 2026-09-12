@@ -6,3 +6,8 @@ desktop.ini
 *~
 .vscode/
 .idea/
+
+# Internal project context — keep local, never publish
+AGENTS.md
+CLAUDE.md
+moodicare.md
